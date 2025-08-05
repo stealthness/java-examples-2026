@@ -134,3 +134,66 @@ This produces the result:
 Hello Bob
 ```
 Note that in this simple example, we only use the first element of the `args` array.
+
+## Java File Formatting
+
+For a Java file to compile, it must be syntactically correct. However, there are also informal rules about how a 
+Java file should be formatted to improve readability for other developers.
+1. Open the file `PoorHelloWorld.java`. This file contains the same logic as your previously corrected `BadHelloWorld.java`, but is it more readable?
+
+```java
+/**
+ * This program same a corrected  BadHelloWorld
+ */
+public class PoorHelloWorld {
+	
+	
+	
+	public static void main(String[] args){
+if (args.length > 0 ) 
+System.out.println("Hello " + args[0]);
+		else {
+			
+			System.out.println("Hello World 2026!");
+			
+		}System.out.println("End")
+				}}
+```
+
+Below is the reformatted version to make it easier to read and maintain:
+
+```java
+// This is an example of good formatted java program
+
+public class PoorHelloWorld {
+	
+	public static void main(String[] args){
+		
+		if (args.length > 0 ) {
+			System.out.println("Hello " + args[0]);
+		} else {
+			
+			System.out.println("Hello World 2026!");
+			
+		}
+		
+		System.out.println("End")
+	}
+	
+}
+```
+
+Different programming languages have different formatting styles. In Java, it is common practice to:
+
++ Indent all code inside the block by one level (usually four spaces).
+
++ Follow K&R style for curly braces:
+
+	- The opening brace { goes at the end of the control statement line.
+
+	- The closing brace } appears on a new line aligned with the start of the block.
+
+Most software development teams or companies define and enforce a consistent code formatting style to improve collaboration and maintainability.
+
+
+
