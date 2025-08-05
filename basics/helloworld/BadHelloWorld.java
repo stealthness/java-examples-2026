@@ -1,19 +1,19 @@
 /**
  * This program has serveral mistakes
  */
-public class BadHelloWorld {
+public class Hello World {
 	
 	public static void main(String[] args){
 		
-		if (args.length > 0) {
-			System.out.println("Hello " + args[0]);
-		} else {
+		if (args.len > 0 {
+			System.out.println('Hello ' + args[0]);
+		} el {
 			
 				System.out.println("Hello World 2026!");
-			
+			}
 		}
 		
-		System.out.println("End");
+		System.out.println("End")
 	}
 	
 }
