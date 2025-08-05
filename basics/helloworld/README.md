@@ -39,14 +39,14 @@ Hello World 2026!
 ```
 
 
-## rDealing with compiling Errors
+## Dealing with compiling Errors
 
-1. Open `BadHelloWorld.java` and examin the program, you might be able to spot some issues just by reading the code, 
-but let use `javac` to compile and see what errors that are detected:
+1. Open `BadHelloWorld.java` and examine the program, you might be able to spot some issues just by reading the code, 
+but let's use `javac` to compile and see what errors are detected:
 
 ```java
 /**
- * This program has serveral mistakes
+ * This program has several mistakes
  */
 public class Hello World {
 	
@@ -66,7 +66,7 @@ public class Hello World {
 }
 ```
 
-2. Compiler should report several errors. Example output:
+2. The compiler should report several errors. Example output:
 ```
 BadHelloWorld.java:4: error: '{' expected
 public class Hello World {
@@ -86,13 +86,13 @@ BadHelloWorld.java:19: error: class, interface, enum, or record expected
 12 errors
 ```
 
-3. Go throuth the errors and fix the code untill the program compiles successfully. 
-A good approach is to fix each error one at a time and recompile refrequently to avoid inroducing new errors.
+3. Go through the errors and fix the code untill the program compiles successfully. 
+A good approach is to fix each error one at a time and recompile frequently to avoid introducing new errors.
 
 4. The corrected file should look something like this
 
 ```java/**
- * This program has serveral mistakes
+ * This program has several mistakes
  */
 public class BadHelloWorld {
 	
@@ -118,13 +118,13 @@ public class BadHelloWorld {
 java BadHelloWorld
 ```
 
-To get the following out put:
+To get the following output:
 
 ```
 Hello World 2026!
 ```
 
-However we can also pass command-line arguments as strings after the command:
+However, we can also pass command-line arguments as strings after the command:
 
 ```
 java BadHelloWorld Bob two 3
@@ -133,4 +133,4 @@ This produces the result:
 ```
 Hello Bob
 ```
-Note in this simple example we only use the first element of `args` array.
+Note that in this simple example, we only use the first element of the `args` array.
