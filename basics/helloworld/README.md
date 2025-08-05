@@ -1,5 +1,7 @@
 # Creating basic HelloWorld
 
+## Writing your first progrom
+
 This exercise assumes that Java is already installed on your system.
 
 1. Create a file called `HelloWorld.java`, and using a text editor, type the following code;
@@ -35,3 +37,100 @@ You should see the following output:
 ```
 Hello World 2026!
 ```
+
+
+## rDealing with compiling Errors
+
+1. Open `BadHelloWorld.java` and examin the program, you might be able to spot some issues just by reading the code, 
+but let use `javac` to compile and see what errors that are detected:
+
+```java
+/**
+ * This program has serveral mistakes
+ */
+public class Hello World {
+	
+	public static void main(String[] args){
+		
+		if (args.len > 0 {
+			System.out.println('Hello ' + args[0]);
+		} el {
+			
+				System.out.println("Hello World 2026!");
+			}
+		}
+		
+		System.out.println("End")
+	}
+	
+}
+```
+
+2. Compiler should report several errors. Example output:
+```
+BadHelloWorld.java:4: error: '{' expected
+public class Hello World {
+                  ^
+BadHelloWorld.java:8: error: ')' expected
+                if (args.len > 0 {
+                                ^                                           ^
+.
+.
+.
+BadHelloWorld.java:16: error: illegal start of type
+                System.out.println("End")
+                                   ^
+BadHelloWorld.java:19: error: class, interface, enum, or record expected
+}
+^
+12 errors
+```
+
+3. Go throuth the errors and fix the code untill the program compiles successfully. 
+A good approach is to fix each error one at a time and recompile refrequently to avoid inroducing new errors.
+
+4. The corrected file should look something like this
+
+```java/**
+ * This program has serveral mistakes
+ */
+public class BadHelloWorld {
+	
+	public static void main(String[] args){
+		
+		if (args.length > 0) {
+			System.out.println("Hello " + args[0]);
+		} else {
+			
+				System.out.println("Hello World 2026!");
+			
+		}
+		
+		System.out.println("End");
+	}
+	
+}
+```
+
+5. You can run the corrected file the same way as before by typing the following in the command line or terminal:
+
+```
+java BadHelloWorld
+```
+
+To get the following out put:
+
+```
+Hello World 2026!
+```
+
+However we can also pass command-line arguments as strings after the command:
+
+```
+java BadHelloWorld Bob two 3
+```
+This produces the result: 
+```
+Hello Bob
+```
+Note in this simple example we only use the first element of `args` array.
